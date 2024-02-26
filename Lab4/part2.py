@@ -1,11 +1,10 @@
 # ENEL525 Lab 4 Part 2
-# Athena McNeil-Roberts 30042085
+# Athena McNeil-Roberts
 
 # Design a predictor based on a feed forward neural network with multiple layers using the backpropagation learning algorithm.
 
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 def mse(array): 
     return np.mean(array.flatten() ** 2)
@@ -17,7 +16,6 @@ def logsig(x):
 # Training a neural network using the LMS Algorithm:
 
 P = np.load('data1.npy').T # The size of the data sequence is 180 points  1 x 180
-print("🐶", P.shape)
 
 
 # Design a predictor network with 5 neurons in a hidden layer and 1 output neuron
@@ -77,11 +75,8 @@ while errors[i] > thres:
         
     # calculate the mean squared error (MSE) using all the errors obtained from the current iteration
     errors.append(mse(err))
-    # print("🦄", mse(err) )
     i = i + 1
     
-    
-# print("🤗🤗")
 
 # learning error curve
 plt.figure("Figure 1")
@@ -89,7 +84,6 @@ plt.semilogy(errors, color='blueviolet')
 plt.title("Learning Error Curve")
 plt.xlabel('# of Iterations')
 plt.ylabel('Mean Square Error')
-
 
 # Testing the Neural Network:
 # Predict the next 10 points using your predictor (points 170 to 180)
@@ -103,7 +97,6 @@ for j in range(10):
     print("| point: ", j+2, " | predicted: ", round(a2[0], 5), " |  True: ", round(P[:,j+2][0],5), " | \n")
   
 trueVals = P[:,170:][0]
-# print("🪰", trueVals)
 
 plt.figure("Figure 2")
 plt.plot(trueVals, color='skyblue', label='True Values')
