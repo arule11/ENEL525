@@ -1,5 +1,5 @@
 # ENEL525 Lab 3 Part 2
-# Athena McNeil-Roberts 30042085
+# Athena McNeil-Roberts
 
 import numpy as np
 import matplotlib.pyplot as plt
