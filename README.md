@@ -1,2 +1,3 @@
-# ENEL525
-Machine Learning for Engineers
+# Machine Learning for Engineers
+
+Assignments and course project. Fall 2023
