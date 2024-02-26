@@ -71,10 +71,6 @@ A1 = np.dot(W, normalized_noisyP1.T)
 A2 = np.dot(W, normalized_noisyP2.T) 
 A3 = np.dot(W, normalized_noisyP3.T) # (30, 1)
 
-# 🐸 CHECK HARD LIM
-# A1 = np.array([hardlim(i) for i in A1])
-# A2 = np.array([hardlim(i) for i in A2])
-# A3 = np.array([hardlim(i) for i in A3])
 
 # plot Hebbian outputs
 fig.add_subplot(4, 3, 7, title="Hebbian Output 1")
@@ -95,9 +91,6 @@ print(tabulate(corrTable, headers=['', 'Output 1', 'Output 2', 'Output 3'], tabl
 
 
 #  PSUEDO INVERSE :
-
-# 🐸 CHECK P INPUTS - NORMAILIZED OR NOT
-# P = np.array([P1, P2, P3]).T
 
 # psuedo inverse of inputs P
 PpsuedoInv = np.linalg.pinv(P) # (3, 30)
