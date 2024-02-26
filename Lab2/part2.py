@@ -1,5 +1,5 @@
 # ENEL525 Lab 2 Part 2
-# Athena McNeil-Roberts 30042085
+# Athena McNeil-Roberts
 
 from sklearn import preprocessing
 import numpy as np
@@ -73,7 +73,6 @@ noisy_P3 = awgn(P3, 20)
 noisy_P4 = awgn(P4, 20)
 noisy_P5 = awgn(P5, 20)
 
-# print("🐯", P1[35], noisy_P1[35])
 fig.add_subplot(4, 5, 6, title="Noisy Image 1")
 plt.imshow(np.reshape(noisy_P1, (64, 64)))
 fig.add_subplot(4, 5, 7, title="Noisy Image 2")
@@ -125,8 +124,6 @@ print(tabulate(corrTable, headers=['', 'Output 1', 'Output 2', 'Output 3', 'Outp
 
 #  PSUEDO INVERSE :
 
-# 🐸 CHECK P INPUTS - NORMAILIZED OR NOT
-# P = np.array([P1, P2, P3, P4, P5]).T
 # psuedo inverse of inputs P
 PpsuedoInv = np.linalg.pinv(P) # (5, 4096)
 
